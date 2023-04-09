@@ -2,7 +2,7 @@ import React from 'react';
 import './JobCatehoryListStyle.css';
 
 const JobCategoryList = ({ jobData }) => {
-    // console.log(jobData)
+    // console.log(" ======== " ,jobData)
 
     return (
         <div className=''>
@@ -14,7 +14,7 @@ const JobCategoryList = ({ jobData }) => {
 
             <div className="job-data-style grid gird-cols-2 md:grid-cols-2 lg:grid-cols-4 text-black w-10/12 md:w-9/12 mx-auto mt-6 gap-5">
                 {
-                    jobData.map(data => <div className='single-data-style p-4 duration-700 ' key={data.id}>
+                    jobData?.map(data => <div className='single-data-style p-4 duration-700 ' key={data.id}>
                         <img src={data?.img} alt="" />
 
                         <div className="text-div pt-2">

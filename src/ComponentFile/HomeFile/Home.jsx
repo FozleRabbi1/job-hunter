@@ -6,6 +6,9 @@ import SingleFeatherData from './FeaturedJobsFile/SingleFeatherData';
 
 const Home = () => {
     const jobData = useLoaderData()
+    if(!jobData){
+        location.reload();
+    }
     // console.log(jobData)
     const [feathurdData, setFeathurdData] = useState([]);
     const [datas, setNewdatas] = useState([]);
@@ -62,7 +65,10 @@ const Home = () => {
 
             <div className="job-category-list-style py-28 bg-slate-400">
 
-                <JobCategoryList jobData={jobData}></JobCategoryList>
+               {
+                jobData &&  <JobCategoryList jobData={jobData}></JobCategoryList>
+               }
+                {/* <JobCategoryList jobData={jobData}></JobCategoryList> */}
 
             </div>
 
@@ -72,7 +78,7 @@ const Home = () => {
                     <p className='py-4'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 </div>
 
-                <div className="featherData-style grid md:grid-cols-2 justify-center  gap-5 px-10 pt-10 ">
+                <div className="featherData-style w-10/12 mx-auto grid md:grid-cols-2 justify-center  gap-5 px-10 pt-10 ">
                     {
                         datas?.map(data => <SingleFeatherData
                             key={data.id}
@@ -80,6 +86,7 @@ const Home = () => {
                         ></SingleFeatherData>)
                     }
                 </div>
+
                 <button onClick={()=> setShowmore(!showMore)} className='bg-red-500 mx-auto w-28 block mt-10'>
                     {showMore ? "show less" : "show more"} </button>
 

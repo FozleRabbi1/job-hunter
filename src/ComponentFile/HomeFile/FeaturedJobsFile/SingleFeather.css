@@ -1,0 +1,9 @@
+.single-datas-style{
+    border: 1px solid aqua;
+    border-radius: 10px;
+    box-shadow: rgba(120, 213, 241, 0.35) 0px -50px 36px -28px inset;
+    /* transition: all 0.5s; */
+}
+/* .single-datas-style:hover{
+    box-shadow: 2px 1px 20px whitesmoke;
+} */

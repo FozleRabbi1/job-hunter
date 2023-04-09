@@ -7,6 +7,7 @@ import Home from './ComponentFile/HomeFile/Home'
 import NotFound from './ComponentFile/FileNotFoundFile/NotFound'
 import AboutUs from './ComponentFile/AboutUsFile/AboutUs'
 import Statistics from './ComponentFile/StatisticsFile/Statistics'
+import ShowDynamicFeatherData from './ComponentFile/DynamicFeatherDataFile/ShowDynamicFeatherData'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,11 @@ const router = createBrowserRouter([
       {
         path: "/", element: <Home></Home>,
         loader: () => fetch("jobCategoriesData.json")
+      },
+      {
+        path: "/showDitles/:id", element: <ShowDynamicFeatherData></ShowDynamicFeatherData>,
+        loader: () => fetch("featuradData.json")
+
       },
       { path: "/statistics", element: <Statistics></Statistics> },
       { path: "/aboutUs", element: <AboutUs></AboutUs> },
