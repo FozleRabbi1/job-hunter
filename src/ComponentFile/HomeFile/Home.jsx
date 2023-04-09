@@ -1,15 +1,20 @@
 import React from 'react';
 import "./Home.css";
 import JobCategoryList from './JobCategoryListFile/JobCategoryList';
+import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
+    const jobData = useLoaderData()
+    // console.log(jobData)
+
+
     return (
         <div className="main-div">
             <div className='w-full home-main-div px-10 md:p-0 lg:p-10 '>
                 <div className="w-full grid md:grid-cols-2 justify-between  ">
                     <div className="text-div text-white p-0 md:pt-20 md:ps-20">
                         <div className="heading-text">
-                            <h2 className="text-3xl md:text-4xl lg:text-6xl   font-bold tracking-tight">
+                            <h2 className="text-3xl md:text-4xl lg:text-6xl text-white font-bold tracking-tight">
                                 One Step Closer To Your
                             </h2>
 
@@ -35,13 +40,20 @@ const Home = () => {
 
 
 
-            <div className="job-category-list-style py-28 bg-slate-100">
+            <div className="job-category-list-style py-28 bg-slate-400">
 
-                <JobCategoryList></JobCategoryList>
+                <JobCategoryList jobData={jobData}></JobCategoryList>
 
             </div>
 
-            
+            <div className="Featured-Jobs text-white py-14">
+                <div className="featured-heading-text text-center">
+                    <h2 className='font-bold text-2xl md:text-3xl lg:text-5xl'>Featured Jobs</h2>
+                    <p className='py-4'>Explore thousands of job opportunities with all the information you need. Its your future</p>
+                </div>
+            </div>
+
+
         </div>
     );
 };

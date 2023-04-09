@@ -11,11 +11,14 @@ import Statistics from './ComponentFile/StatisticsFile/Statistics'
 const router = createBrowserRouter([
   {
     path: "/", element: <App />,
-    children : [
-      {path : "/", element : <Home></Home>},
-      {path : "/statistics", element: <Statistics></Statistics>},
-      {path : "/aboutUs", element : <AboutUs></AboutUs>},
-      {path : "*", element : <NotFound></NotFound>}
+    children: [
+      {
+        path: "/", element: <Home></Home>,
+        loader: () => fetch("jobCategoriesData.json")
+      },
+      { path: "/statistics", element: <Statistics></Statistics> },
+      { path: "/aboutUs", element: <AboutUs></AboutUs> },
+      { path: "*", element: <NotFound></NotFound> }
     ]
   }
 ])
