@@ -1,0 +1,24 @@
+.home-main-div {
+    margin: 50px 0;
+    color: white;
+}
+
+.home-main-div .heading-text .job-text-div {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 68, 121, 0.7931547619047) 39%, rgba(0, 212, 255, .4) 100%);
+}
+
+.home-main-div .heading-text .job-text-style {
+    background: linear-gradient(to right, rgba(44, 108, 165, 0.793), rgba(0, 212, 255, 9));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.img img {
+    height: 550px;
+}
+.home-main-div button{
+    background: linear-gradient(to right,  rgba(44, 108, 165, 0.793), rgba(0, 212, 255, 9));
+    padding: 5px 50px;
+    /* font-size: 1.2rem; */
+}

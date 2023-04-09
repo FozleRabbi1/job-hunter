@@ -1,0 +1,10 @@
+.nav-style{
+    background-color: rgba(90, 87, 87, 0.5);
+    color: white;
+    border-radius: 0 0 10px 10px ;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(38, 118, 155, 0.3) 0px 30px 60px -100px, rgba(12, 100, 172, 0.5) 0px -2px 6px 0px inset;
+}
+.nav-style .nav-button-style{
+    background: linear-gradient(to right,  rgba(44, 108, 165, 0.793), rgba(0, 212, 255, 9));
+    padding: 5px 50px;
+}
