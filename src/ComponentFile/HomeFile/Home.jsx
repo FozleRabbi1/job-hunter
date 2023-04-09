@@ -16,9 +16,6 @@ const Home = () => {
             .then(data => setFeathurdData(data))
     }, [])
 
-    const showMoreFun = () => {
-        setShowmore(true);
-    }
     useEffect(() => {
         if (showMore) {
             // const newData = feathurdData
@@ -29,8 +26,7 @@ const Home = () => {
             setNewdatas(newData)
         }
 
-    }, [showMoreFun])
-    // console.log(feathurdData.slice(0,4))
+    }, [feathurdData,showMore])
 
 
     return (
@@ -84,8 +80,8 @@ const Home = () => {
                         ></SingleFeatherData>)
                     }
                 </div>
-
-                <button onClick={showMoreFun} className='bg-red-500 mx-auto w-28 block mt-10'>show more</button>
+                <button onClick={()=> setShowmore(!showMore)} className='bg-red-500 mx-auto w-28 block mt-10'>
+                    {showMore ? "show less" : "show more"} </button>
 
 
 
