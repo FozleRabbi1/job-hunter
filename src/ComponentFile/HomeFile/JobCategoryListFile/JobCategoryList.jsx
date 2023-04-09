@@ -2,7 +2,7 @@ import React from 'react';
 import './JobCatehoryListStyle.css';
 
 const JobCategoryList = ({ jobData }) => {
-    console.log(jobData)
+    // console.log(jobData)
 
     return (
         <div className=''>

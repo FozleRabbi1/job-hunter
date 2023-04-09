@@ -1,11 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Home.css";
 import JobCategoryList from './JobCategoryListFile/JobCategoryList';
 import { useLoaderData } from 'react-router-dom';
+import SingleFeatherData from './FeaturedJobsFile/SingleFeatherData';
 
 const Home = () => {
     const jobData = useLoaderData()
     // console.log(jobData)
+    const [feathurdData, setFeathurdData] = useState([]);
+    const [datas, setNewdatas] = useState([]);
+    const [showMore, setShowmore] = useState(false)
+    useEffect(() => {
+        fetch("featuradData.json")
+            .then(res => res.json())
+            .then(data => setFeathurdData(data))
+    }, [])
+
+    const showMoreFun = () => {
+        setShowmore(true);
+    }
+    useEffect(() => {
+        if (showMore) {
+            // const newData = feathurdData
+            setNewdatas(feathurdData)
+        }
+        else {
+            const newData = feathurdData.slice(0, 4)
+            setNewdatas(newData)
+        }
+
+    }, [showMoreFun])
+    // console.log(feathurdData.slice(0,4))
 
 
     return (
@@ -39,7 +64,6 @@ const Home = () => {
             </div>
 
 
-
             <div className="job-category-list-style py-28 bg-slate-400">
 
                 <JobCategoryList jobData={jobData}></JobCategoryList>
@@ -51,6 +75,22 @@ const Home = () => {
                     <h2 className='font-bold text-2xl md:text-3xl lg:text-5xl'>Featured Jobs</h2>
                     <p className='py-4'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 </div>
+
+                <div className="featherData-style grid md:grid-cols-2 justify-center  gap-5 px-10 pt-10 ">
+                    {
+                        datas?.map(data => <SingleFeatherData
+                            key={data.id}
+                            data={data}
+                        ></SingleFeatherData>)
+                    }
+                </div>
+
+                <button onClick={showMoreFun} className='bg-red-500 mx-auto w-28 block mt-10'>show more</button>
+
+
+
+
+
             </div>
 
 
