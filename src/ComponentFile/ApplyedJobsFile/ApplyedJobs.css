@@ -2,3 +2,12 @@
     border: 1px solid aqua;
     border-radius: 10px;
 }
+.applay-show-div .button-div button{
+    background: linear-gradient(to right, rgba(44, 108, 165, 0.793), rgba(0, 212, 255, 9));
+    padding: 5px 30px;
+}
+.applay-show-div .content .text button{
+    border: 1px solid rgba(140, 245, 245,0.4);
+    padding: 2px 10px;
+    margin-top: 5px;
+}

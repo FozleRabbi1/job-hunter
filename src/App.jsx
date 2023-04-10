@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './ComponentFile/NavbarFile/Navbar'
 import { Outlet, useNavigation } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +21,7 @@ function App() {
       }
       </div>
 
+      <ToastContainer></ToastContainer>
       <Outlet></Outlet>
     </div>
   )

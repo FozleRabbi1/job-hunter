@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import SingleApplyData from './SingleApplyData';
+import { Dropdown } from 'flowbite-react';
 
 const ApplayJobPage = () => {
     const getData = localStorage.getItem("dataId");
+    const [dropdownValue, setWropdownValue] = useState("")
 
     const data = JSON.parse(getData)
     let getDatas = [];
@@ -10,14 +12,42 @@ const ApplayJobPage = () => {
         getDatas.push(data[id])
 
     }
+    console.log(getDatas)
+    if (dropdownValue === "outside") {
+
+        getDatas = getDatas.sort((a, b) => a.jobCategory.localeCompare(b.jobCategory));
+
+    }
+    else if (dropdownValue === "fulltime") {
+        getDatas = getDatas.sort((a, b) => a.otherCategory.localeCompare(b.otherCategory));
+
+    }
+    console.log(getDatas)
+
+
 
 
     return (
         <div>
-            <h2>appplayed Job</h2>
+            <h2 className='text-center text-4xl mt-6'>appplayed Job</h2>
 
+            <div className="dropDown flex justify-end me-52 mt-5">
+                <Dropdown
+                    label="Filter By"
+                    dismissOnClick={false}
+                // onClick={(event) => filteValue(event.target.textContent)}
+                >
+                    <Dropdown.Item onClick={() => setWropdownValue("outside")}>
+                        Outside
+                    </Dropdown.Item>
+                    <Dropdown.Item onClick={() => setWropdownValue("fulltime")}>
+                        Fulltime
+                    </Dropdown.Item>
 
-            <div className="py-10 w-8/12 mx-auto">
+                </Dropdown>
+            </div>
+
+            <div className="pt-0 pb-10 w-11/12 md:w-10/12 lg:w-8/12 mx-auto">
                 {
                     getDatas.map(data => <SingleApplyData key={data.id} data={data} ></SingleApplyData>)
                 }

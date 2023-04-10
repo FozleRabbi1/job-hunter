@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { json, useLoaderData, useLocation, useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const ShowDynamicFeatherData = () => {
     // const locationn = useLocation();
@@ -43,6 +44,7 @@ const ShowDynamicFeatherData = () => {
 
 
     const stortedApplyData = (jobName, dataObj) => {
+        toast("SuccessFully Applayed")
         const cart = getLocalData();
         cart[jobName] = dataObj;
         const setData = JSON.stringify(cart);
@@ -53,7 +55,7 @@ const ShowDynamicFeatherData = () => {
 
     return (
         <div>
-            <h2 className='text-center text-3xl py-20'>Job Details </h2>
+            <h2 className='text-center text-3xl py-20  '>Job Details </h2>
 
 
             <div className="details-content bg-white text-black  ">
