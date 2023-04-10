@@ -87,7 +87,6 @@ const ShowDynamicFeatherData = () => {
                                 <h5><span className='font-semibold' >Address</span> : {address}</h5>
                             </div>
                             <button onClick={() => stortedApplyData(jobName, dataObj)} className='text-center bg-red-500 w-full md:w-10/12 py-2 mt-4'>Applay</button>
-                            {/* <button onClick={() => stortedApplyData(id, jobName)} className='text-center bg-red-500 w-8/12 mt-4'>Applay</button> */}
                         </div>
 
                     </div>
