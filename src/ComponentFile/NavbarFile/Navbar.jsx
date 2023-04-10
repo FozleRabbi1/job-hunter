@@ -5,6 +5,10 @@ import ActiveLink from './ActiveLink';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const reloadFun = () =>{
+        // location.reload()
+        console.log(" reload")
+    }
     return (
         <div className=' sticky top-0 z-50 '>
             <nav className="nav-style">
@@ -24,14 +28,21 @@ const Navbar = () => {
                                     </ActiveLink>
 
                                     <ActiveLink
-                                        to="/statistics"
+                                        to="statistics"
                                         className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
                                         Statistics
                                     </ActiveLink>
+                                    
+                                    <ActiveLink
+                                        to="applayJobPage"
+                                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                    >
+                                        Applyed-Jobs
+                                    </ActiveLink>
 
                                     <ActiveLink
-                                        to="/aboutUs"
+                                        to="aboutUs"
                                         className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
                                         About-Us
@@ -39,12 +50,6 @@ const Navbar = () => {
 
 
 
-                                    <ActiveLink
-                                        to="/dashboard"
-                                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                    >
-                                        Dashboard
-                                    </ActiveLink>
                                 </div>
                             </div>
                             <button className=' text-1xl md:3xl nav-button-style hidden md:block'>Start Applay</button>

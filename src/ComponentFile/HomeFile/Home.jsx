@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import "./Home.css";
 import JobCategoryList from './JobCategoryListFile/JobCategoryList';
-import { useLoaderData } from 'react-router-dom';
 import SingleFeatherData from './FeaturedJobsFile/SingleFeatherData';
+import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
-    const jobData = useLoaderData()
-    if(!jobData){
-        location.reload();
-    }
-    // console.log(jobData)
+    const loadData = [];
+    // const loadData = useLoaderData();
+    
     const [feathurdData, setFeathurdData] = useState([]);
     const [datas, setNewdatas] = useState([]);
     const [showMore, setShowmore] = useState(false)
@@ -19,9 +17,10 @@ const Home = () => {
             .then(data => setFeathurdData(data))
     }, [])
 
+    // console.log(loadData)
+
     useEffect(() => {
         if (showMore) {
-            // const newData = feathurdData
             setNewdatas(feathurdData)
         }
         else {
@@ -29,8 +28,9 @@ const Home = () => {
             setNewdatas(newData)
         }
 
-    }, [feathurdData,showMore])
+    }, [feathurdData, showMore])
 
+    
 
     return (
         <div className="main-div">
@@ -65,10 +65,7 @@ const Home = () => {
 
             <div className="job-category-list-style py-28 bg-slate-400">
 
-               {
-                jobData &&  <JobCategoryList jobData={jobData}></JobCategoryList>
-               }
-                {/* <JobCategoryList jobData={jobData}></JobCategoryList> */}
+                <JobCategoryList ></JobCategoryList>
 
             </div>
 
@@ -84,10 +81,11 @@ const Home = () => {
                             key={data.id}
                             data={data}
                         ></SingleFeatherData>)
+
                     }
                 </div>
 
-                <button onClick={()=> setShowmore(!showMore)} className='bg-red-500 mx-auto w-28 block mt-10'>
+                <button onClick={() => setShowmore(!showMore)} className='bg-red-500 mx-auto w-28 block mt-10'>
                     {showMore ? "show less" : "show more"} </button>
 
 

@@ -1,8 +1,33 @@
 import React from 'react';
 import './JobCatehoryListStyle.css';
 
-const JobCategoryList = ({ jobData }) => {
-    // console.log(" ======== " ,jobData)
+const JobCategoryList = ({loadData}) => {
+    const jobData = [
+        {
+            id: 1,
+            img: "https://i.ibb.co/VxcRV4p/accounts-1.png",
+            jobName: "Account & Finance",
+            availableJob: 300
+        },
+        {
+            id: 2,
+            img: "https://i.ibb.co/KzpHqZT/business-1.png",
+            jobName: "Creative Design",
+            availableJob: 100
+        },
+        {
+            id: 3,
+            img: "https://i.ibb.co/khTt2KR/social-media-1.png",
+            jobName: "Marketing & Sales",
+            availableJob: 150
+        },
+        {
+            id: 4,
+            img: "https://i.ibb.co/YpzJzfh/chip-1.png",
+            jobName: "Engineering Job",
+            availableJob: 250
+        }
+    ]
 
     return (
         <div className=''>

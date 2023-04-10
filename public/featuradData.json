@@ -1,4 +1,5 @@
 [
+    
     {
       "id": 1,
       "img": "https://www.pngall.com/wp-content/uploads/5/Google-Logo-PNG.png",
@@ -8,11 +9,14 @@
       "otherCategory": "fulltime",
       "location": "San Francisco, CA",
       "salary": "100K-150K",
-      "jobDescription": "Develop software for a leading tech company",
-      "jobResponsibility": "Write clean, maintainable code that is scalable and efficient",
+      "jobDescription": "Develop software for a leading tech company, with a focus on databases and data management.",
+      "jobResponsibility": "Write clean, maintainable code that is scalable and efficient. Collaborate with cross-functional teams to design and implement solutions that meet business requirements",
       "educationalRequirements": "Bachelor's degree in Computer Science or related field",
-      "experiences": "2-5 years",
-      "jobTitle": "Software Engineer"
+      "experiences": "1.5 years",
+      "jobTitle": "Software Engineer",
+      "email": "hsanders9962@example.com",
+          "phone": "(387) 381-4681",
+          "address": "2468 Central Avenue, City of Commerce, CA 90040"
     },
     {
       "id": 2,
@@ -23,11 +27,14 @@
       "otherCategory": "fulltime",
       "location": "New York, NY",
       "salary": "100K-150K",
-      "jobDescription": "Develop and execute marketing campaigns for a leading consumer brand",
-      "jobResponsibility": "Lead a team of marketing professionals to drive sales and brand awareness",
+      "jobDescription": "Develop and execute marketing campaigns for a leading consumer brand, with a focus on product design and user experience.",
+      "jobResponsibility": "Lead a team of marketing professionals to drive sales and brand awareness. Collaborate with cross-functional teams to design and implement user-centric product solutions",
       "educationalRequirements": "Bachelor's degree in Marketing or related field",
-      "experiences": "3-5 years",
-      "jobTitle": "Marketing Manager"
+      "experiences": "3+ years",
+      "jobTitle": "Marketing Manager",
+      "email": "ljordan4643@example.com",
+        "phone": "(415) 674-8632",
+        "address": "9823 E. Birchwood Street, Inglewood, CA 90301"
     },
     {
       "id": 3,
@@ -38,11 +45,14 @@
       "otherCategory": "fulltime",
       "location": "Austin, TX",
       "salary": "100K-150K",
-      "jobDescription": "Analyze large datasets to identify trends and patterns",
-      "jobResponsibility": "Design and implement machine learning models to support business objectives",
+      "jobDescription": " Analyze large datasets to identify trends and patterns, with a focus on data science and machine learning",
+      "jobResponsibility": "Design and implement machine learning models to support business objectives. Collaborate with cross-functional teams to develop and deploy data-driven solutions.",
       "educationalRequirements": "Master's degree in Computer Science or related field",
-      "experiences": "2-4 years",
-      "jobTitle": "Data Scientist"
+      "experiences": "2+ years",
+      "jobTitle": "Data Scientist",
+      "email": "rrichardson9377@example.com",
+        "phone": "(714) 329-7326",
+        "address": "8856 N. Birch Hill Drive, Anaheim, CA 92801"
     },
     {
       "id": 4,
@@ -53,11 +63,14 @@
       "otherCategory": "fulltime",
       "location": "Los Angeles, CA",
       "salary": "100K-150K",
-      "jobDescription": "Lead a sales team for a growing tech company",
-      "jobResponsibility": "Develop and execute sales strategies to meet revenue targets",
+      "jobDescription": "Lead a sales team for a growing tech company, with a focus on sales strategy and revenue growth.",
+      "jobResponsibility": "Develop and execute sales strategies to meet revenue targets. Collaborate with cross-functional teams to optimize sales processes and drive customer success",
       "educationalRequirements": "Bachelor's degree in Business or related field",
       "experiences": "5+ years",
-      "jobTitle": "Sales Manager"
+      "jobTitle": "Sales Manager",
+      "email": "lgonzalez7355@example.com",
+        "phone": "(831) 233-8241",
+        "address": "4909 W. Lane Avenue, Fresno, CA 93706"
     },
     {
         "id": 5,
@@ -68,11 +81,14 @@
         "otherCategory": "fulltime",
         "location": "Anywhere",
         "salary": "120K-160K",
-        "jobDescription": "Join a team building innovative software solutions",
-        "jobResponsibility": "Design and implement scalable and high-performing software systems",
+        "jobDescription": " Join a team building innovative software solutions, with a focus on software development and engineering.",
+        "jobResponsibility": "Design and implement scalable and high-performing software systems. Collaborate with cross-functional teams to deliver high-quality software solutions that meet business requirements.",
         "educationalRequirements": "Bachelor's or Master's degree in Computer Science or related field",
         "experiences": "3+ years",
-        "jobTitle": "Software Engineer"
+        "jobTitle": "Software Engineer",
+        "email": "emartin1246@example.com",
+        "phone": "(408) 216-0572",
+        "address": "3740 E. San Antonio Street, San Jose, CA 95111"
       },
       {
         "id": 6,
@@ -83,10 +99,13 @@
         "otherCategory": "fulltime",
         "location": "New York, NY",
         "salary": "150K-200K",
-        "jobDescription": "Lead the marketing team for a fast-growing e-commerce company",
-        "jobResponsibility": "Develop and execute marketing strategies to drive customer acquisition and retention",
+        "jobDescription": "Lead the marketing team for a fast-growing e-commerce company, with a focus on brand strategy and customer engagement.",
+        "jobResponsibility": "Develop and execute marketing strategies to drive customer acquisition and retention. Collaborate with cross-functional teams to build and strengthen the brand and drive business growth.",
         "educationalRequirements": "Bachelor's or Master's degree in Marketing or related field",
         "experiences": "7+ years",
-        "jobTitle": "Marketing Director"
+        "jobTitle": "Marketing Director",
+        "email": "ckelly8321@example.com",
+        "phone": "(619) 292-7983",
+        "address": "5693 E. Loma Alta Drive, San Diego, CA 92115"
       }
 ]

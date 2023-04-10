@@ -9,7 +9,6 @@ const SingleFeatherData = ({ data }) => {
     const { id, img, title, jobCategory, otherCategory, location, salary } = data;
 
     const navigate = useNavigate();
-
     const sendDataFun = (id) => {
         navigate(`/showDitles/${id}`)
     }
@@ -20,15 +19,15 @@ const SingleFeatherData = ({ data }) => {
             <img className=' w-6/12 md:w-28 mx-auto md:m-0 ' src={img} alt="" />
             <h4 className='mt-2'>{title}</h4>
             <div className="button-div">
-                <button className='bg-red-500'>{jobCategory}</button>
-                <button className='bg-green-500 ms-2'>{otherCategory}</button>
+                <button className=''>{jobCategory}</button>
+                <button className=' ms-2'>{otherCategory}</button>
             </div>
             <span className='block my-2'>
                 <small> <FontAwesomeIcon className='me-1' icon={faLocationDot} />  Location : {location}</small>
                 <small className='ms-3'> <FontAwesomeIcon className='me-1' icon={faSackDollar} /> salary : {salary}</small>
             </span>
 
-            <button className='bg-green-500' onClick={() => sendDataFun(id)}>View Ditles</button>
+            <button className='showmore-button' onClick={() => sendDataFun(id)}>View Ditles</button>
 
         </div>
     );
