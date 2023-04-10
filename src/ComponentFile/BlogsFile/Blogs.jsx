@@ -4,8 +4,9 @@ import './Blog.css';
 const Blogs = () => {
     return (
         <div>
+            <h2 className='text-center text-2xl pt-10'>Blog's</h2>
 
-            <div className="blog-parend-div grid grid-cols-1 md:grid-cols-2 gap-8 p-10 md:p-28" >
+            <div className="blog-parend-div grid grid-cols-1 md:grid-cols-2 gap-8 px-10 md:px-28 py-5 md:py-20" >
                 <div className="blog-one">
                     <h2 className='text-red-500 font-semibold p-3'>When Use context Api ??..</h2>
                     <p>The Context API is used in React when you have data that needs to be shared across multiple components at different levels of the component tree. Instead of passing the data through every level of the component tree, the Context API allows you to create a central store or data source that can be accessed by any component without having to pass the data through intermediate components.</p>

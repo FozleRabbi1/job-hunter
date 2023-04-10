@@ -12,23 +12,27 @@ const data01 = [
 ];
 const Statistics = () => {
     return (
-        <div style={{ width: '100%', height: '500px' }}>
-            <ResponsiveContainer>
-                <PieChart>
-                    <Pie
-                        dataKey="value"
-                        isAnimationActive={false}
-                        data={data01}
-                        cx="50%"
-                        cy="50%"
-                        outerRadius={80}
-                        fill="#8884d8"
-                        label
-                    />
-                    <Legend />
-                    <Tooltip />
-                </PieChart>
-            </ResponsiveContainer>
+
+        <div>
+            <h2 className='text-center font-semibold text-2xl pt-5'>statistics</h2>
+            <div style={{ width: '100%', height: '500px' }}>
+                <ResponsiveContainer>
+                    <PieChart>
+                        <Pie
+                            dataKey="value"
+                            isAnimationActive={false}
+                            data={data01}
+                            cx="50%"
+                            cy="50%"
+                            outerRadius={80}
+                            fill="#8884d8"
+                            label
+                        />
+                        <Legend />
+                        <Tooltip />
+                    </PieChart>
+                </ResponsiveContainer>
+            </div>
         </div>
     );
 };

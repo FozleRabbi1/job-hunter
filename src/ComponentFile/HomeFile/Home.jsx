@@ -84,14 +84,7 @@ const Home = () => {
 
                 <button onClick={() => setShowmore(!showMore)} className='bg-red-500 mx-auto w-28 block mt-10 p-2 rounded-md'>
                     {showMore ? "show less" : "show more"} </button>
-
-
-
-
-
             </div>
-
-
         </div>
     );
 };
