@@ -7,7 +7,7 @@ const NotFound = () => {
         <div>
             <h2>404!! File not found</h2>
             <p>
-                <i>{error.statusText || error.message}</i>
+                <i>{error?.statusText || error?.message}</i>
             </p>
         </div>
     );

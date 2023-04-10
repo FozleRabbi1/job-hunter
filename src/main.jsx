@@ -27,6 +27,11 @@ const router = createBrowserRouter([
         loader: async () => await fetch("featuradData.json")
 
       },
+      {
+        path: "/applayJobPage/showDitles/:id", element: <ShowDynamicFeatherData></ShowDynamicFeatherData>,
+        loader: async () => await fetch("featuradData.json")
+
+      },
       { path: "statistics", element: <Statistics></Statistics> },
       {
         path: "applayJobPage", element : <ApplayJobPage></ApplayJobPage>,

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { json, useLoaderData, useLocation } from 'react-router-dom';
+import { json, useLoaderData, useLocation, useNavigate, useParams } from 'react-router-dom';
 
 const ShowDynamicFeatherData = () => {
-    const locationn = useLocation();
-    const idd = locationn.pathname.split("/")[2];
+    // const locationn = useLocation();
+    // const idd = locationn.pathname.split("/")[2];
+    const idd = useParams();
 
     const featherData = useLoaderData();
     let getData
@@ -11,7 +12,7 @@ const ShowDynamicFeatherData = () => {
         return
     } else {
         getData = featherData?.filter(data => {
-            if (data.id === parseInt(idd)) {
+            if (data.id === parseInt(idd.id)) {
                 return data
             }
         });
@@ -20,16 +21,19 @@ const ShowDynamicFeatherData = () => {
 
     const { id, img, jobName, title, jobCategory, otherCategory, location, salary, jobDescription, jobResponsibility, educationalRequirements, experiences, jobTitle, email, phone, address } = getData[0];
     const dataObj = {
+        id: id,
         img: img,
         title: title,
-        jobName: jobName
-
+        jobName: jobName,
+        jobCategory: jobCategory,
+        otherCategory: otherCategory,
+        location: location,
+        salary: salary,
     }
 
     const getLocalData = () => {
         let stortData = {};
         const getData = localStorage.getItem("dataId");
-        // console.log(getData)
         if (getData) {
             stortData = JSON.parse(getData)
         }
