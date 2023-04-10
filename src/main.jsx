@@ -11,6 +11,7 @@ import ShowDynamicFeatherData from './ComponentFile/DynamicFeatherDataFile/ShowD
 // import ApplyedJobs from './ComponentFile/ApplyedJobsFile/ApplyedJobs'
 import { asyncLodaerFun } from './ComponentFile/LoderFun/Loder'
 import ApplayJobPage from './ComponentFile/ApplyedJobsFile/ApplayJobPage'
+import Blogs from './ComponentFile/BlogsFile/Blogs'
 // import ApplayJobPage from './ComponentFile/ApplyedJobsFile/ApplayJobPage'
 
 const router = createBrowserRouter([
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
       {
         path: "applayJobPage", element : <ApplayJobPage></ApplayJobPage>,
       },
-      { path: "aboutUs", element: <AboutUs></AboutUs> },
+      { path: "blogs", element: <Blogs></Blogs> },
       { path: "*", element: <NotFound></NotFound> }
     ]
   }

@@ -5,8 +5,6 @@ import SingleFeatherData from './FeaturedJobsFile/SingleFeatherData';
 import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
-    const loadData = [];
-    // const loadData = useLoaderData();
     
     const [feathurdData, setFeathurdData] = useState([]);
     const [datas, setNewdatas] = useState([]);
@@ -17,7 +15,6 @@ const Home = () => {
             .then(data => setFeathurdData(data))
     }, [])
 
-    // console.log(loadData)
 
     useEffect(() => {
         if (showMore) {
@@ -85,7 +82,7 @@ const Home = () => {
                     }
                 </div>
 
-                <button onClick={() => setShowmore(!showMore)} className='bg-red-500 mx-auto w-28 block mt-10'>
+                <button onClick={() => setShowmore(!showMore)} className='bg-red-500 mx-auto w-28 block mt-10 p-2 rounded-md'>
                     {showMore ? "show less" : "show more"} </button>
 
 

@@ -3,8 +3,6 @@ import { json, useLoaderData, useLocation, useNavigate, useParams } from 'react-
 import { toast } from 'react-toastify';
 
 const ShowDynamicFeatherData = () => {
-    // const locationn = useLocation();
-    // const idd = locationn.pathname.split("/")[2];
     const idd = useParams();
 
     const featherData = useLoaderData();
@@ -18,7 +16,6 @@ const ShowDynamicFeatherData = () => {
             }
         });
     }
-    // console.log(getData)
 
     const { id, img, jobName, title, jobCategory, otherCategory, location, salary, jobDescription, jobResponsibility, educationalRequirements, experiences, jobTitle, email, phone, address } = getData[0];
     const dataObj = {
