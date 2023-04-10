@@ -31,7 +31,7 @@ const ApplayJobPage = () => {
         <div>
             <h2 className='text-center text-4xl mt-6'>appplayed Job</h2>
 
-            <div className="dropDown flex justify-end me-52 mt-5">
+            <div className="dropDown flex justify-end me-5 md:me-16 lg:me-56 mt-5">
                 <Dropdown
                     label="Filter By"
                     dismissOnClick={false}

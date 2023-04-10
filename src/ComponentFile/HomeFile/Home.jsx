@@ -69,13 +69,13 @@ const Home = () => {
 
             </div>
 
-            <div className="Featured-Jobs text-white py-14">
+            <div className="Featured-Jobs text-white py-5 md:py-14">
                 <div className="featured-heading-text text-center">
                     <h2 className='font-bold text-2xl md:text-3xl lg:text-5xl'>Featured Jobs</h2>
                     <p className='py-4'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 </div>
 
-                <div className="featherData-style w-10/12 mx-auto grid md:grid-cols-2 justify-center  gap-5 px-10 pt-10 ">
+                <div className="featherData-style w-full md:w-10/12 mx-auto grid md:grid-cols-2 justify-center  gap-5 px-10 pt-10 ">
                     {
                         datas?.map(data => <SingleFeatherData
                             key={data.id}

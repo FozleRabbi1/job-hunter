@@ -114,38 +114,33 @@ const Navbar = () => {
                     {(ref) => (
                         <div className="md:hidden" id="mobile-menu">
                             <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
-                                <ActiveLink
-                                    to="/"
-                                    className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
-                                >
-                                    Home
-                                </ActiveLink>
-                                <ActiveLink
-                                    to="/Statistics"
-                                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                >
-                                    Statistics
-                                </ActiveLink>
+                            <ActiveLink
+                                        to="/"
+                                        className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                                    >
+                                        Home
+                                    </ActiveLink>
 
-                                <ActiveLink
-                                    to="/aboutUs"
-                                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                >
-                                    About-Us
-                                </ActiveLink>
+                                    <ActiveLink
+                                        to="statistics"
+                                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                    >
+                                        Statistics
+                                    </ActiveLink>
+                                    
+                                    <ActiveLink
+                                        to="applayJobPage"
+                                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                    >
+                                        Applyed-Jobs
+                                    </ActiveLink>
 
-                                <ActiveLink
-                                    to="/contact"
-                                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                >
-                                    Contact
-                                </ActiveLink>
-                                <ActiveLink
-                                    to="/dashboard"
-                                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                >
-                                    Dashboard
-                                </ActiveLink>
+                                    <ActiveLink
+                                        to="aboutUs"
+                                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                    >
+                                        About-Us
+                                    </ActiveLink>
 
 
                                 <button className=' text-1xl md:3xl button-style'>Start Applay</button>
