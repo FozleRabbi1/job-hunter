@@ -1,34 +1,7 @@
 import React from 'react';
 import './JobCatehoryListStyle.css';
 
-const JobCategoryList = ({loadData}) => {
-    const jobData = [
-        {
-            id: 1,
-            img: "https://i.ibb.co/VxcRV4p/accounts-1.png",
-            jobName: "Account & Finance",
-            availableJob: 300
-        },
-        {
-            id: 2,
-            img: "https://i.ibb.co/KzpHqZT/business-1.png",
-            jobName: "Creative Design",
-            availableJob: 100
-        },
-        {
-            id: 3,
-            img: "https://i.ibb.co/khTt2KR/social-media-1.png",
-            jobName: "Marketing & Sales",
-            availableJob: 150
-        },
-        {
-            id: 4,
-            img: "https://i.ibb.co/YpzJzfh/chip-1.png",
-            jobName: "Engineering Job",
-            availableJob: 250
-        }
-    ]
-
+const JobCategoryList = ({catagoryData}) => {
     return (
         <div className=''>
 
@@ -39,7 +12,8 @@ const JobCategoryList = ({loadData}) => {
 
             <div className="job-data-style grid gird-cols-2 md:grid-cols-2 lg:grid-cols-4 text-black w-10/12 md:w-9/12 mx-auto mt-6 gap-5">
                 {
-                    jobData?.map(data => <div className='single-data-style p-4 duration-700 ' key={data.id}>
+                    catagoryData?.map(data => <div className='single-data-style p-4 duration-700 ' key={data.id}>
+                    {/* jobData?.map(data => <div className='single-data-style p-4 duration-700 ' key={data.id}> */}
                         <img src={data?.img} alt="" />
 
                         <div className="text-div pt-2">

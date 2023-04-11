@@ -5,7 +5,8 @@ import SingleFeatherData from './FeaturedJobsFile/SingleFeatherData';
 import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
-    
+    const catagoryData = useLoaderData();
+
     const [feathurdData, setFeathurdData] = useState([]);
     const [datas, setNewdatas] = useState([]);
     const [showMore, setShowmore] = useState(false)
@@ -14,7 +15,7 @@ const Home = () => {
             .then(res => res.json())
             .then(data => setFeathurdData(data))
     }, [])
-
+    // console.log(feathurdData)
 
     useEffect(() => {
         if (showMore) {
@@ -27,7 +28,8 @@ const Home = () => {
 
     }, [feathurdData, showMore])
 
-    
+    console.log(catagoryData)
+
 
     return (
         <div className="main-div">
@@ -62,7 +64,7 @@ const Home = () => {
 
             <div className="job-category-list-style py-28 bg-slate-400">
 
-                <JobCategoryList ></JobCategoryList>
+                <JobCategoryList catagoryData={catagoryData} ></JobCategoryList>
 
             </div>
 

@@ -21,16 +21,16 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/", element: <Home></Home>,
-
+        loader : () => fetch("/catagory.json")
       },
       {
         path: "showDitles/:id", element: <ShowDynamicFeatherData></ShowDynamicFeatherData>,
-        loader: async () => await fetch("featuradData.json")
+        loader:  () =>  fetch("/featuradData.json")
 
       },
       {
         path: "/applayJobPage/showDitles/:id", element: <ShowDynamicFeatherData></ShowDynamicFeatherData>,
-        loader: async () => await fetch("featuradData.json")
+        loader:  () =>  fetch("/featuradData.json")
 
       },
       { path: "statistics", element: <Statistics></Statistics> },

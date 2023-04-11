@@ -15,12 +15,17 @@ const ApplayJobPage = () => {
     console.log(getDatas)
     if (dropdownValue === "outside") {
 
-        getDatas = getDatas.sort((a, b) => a.jobCategory.localeCompare(b.jobCategory));
+        getDatas = getDatas.filter((a) => a.jobCategory.includes("outside"));
+        // getDatas = getDatas.sort((a, b) => a.jobCategory.localeCompare(b.jobCategory));
 
     }
-    else if (dropdownValue === "fulltime") {
-        getDatas = getDatas.sort((a, b) => a.otherCategory.localeCompare(b.otherCategory));
+    else if (dropdownValue === "remote") {
+        getDatas = getDatas.filter((a) => a.jobCategory.includes("remote"));
+        // getDatas = getDatas.sort((a, b) => a.otherCategory.localeCompare(b.otherCategory));
 
+    }
+    else{
+        getDatas = getDatas
     }
     console.log(getDatas)
 
@@ -37,10 +42,13 @@ const ApplayJobPage = () => {
                     dismissOnClick={false}
                 // onClick={(event) => filteValue(event.target.textContent)}
                 >
+                    <Dropdown.Item onClick={() => setWropdownValue("all")}>
+                        See All
+                    </Dropdown.Item>
                     <Dropdown.Item onClick={() => setWropdownValue("outside")}>
                         Outside
                     </Dropdown.Item>
-                    <Dropdown.Item onClick={() => setWropdownValue("fulltime")}>
+                    <Dropdown.Item onClick={() => setWropdownValue("remote")}>
                         Fulltime
                     </Dropdown.Item>
 

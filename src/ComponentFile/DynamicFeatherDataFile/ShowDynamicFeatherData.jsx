@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 
 const ShowDynamicFeatherData = () => {
     const idd = useParams();
+    // const naviGate = useNavigate();
 
     const featherData = useLoaderData();
     let getData
@@ -37,8 +38,6 @@ const ShowDynamicFeatherData = () => {
         }
         return stortData;
     }
-
-
 
     const stortedApplyData = (jobName, dataObj) => {
         toast("SuccessFully Applayed")
