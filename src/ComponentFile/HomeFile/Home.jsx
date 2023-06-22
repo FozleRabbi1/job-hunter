@@ -47,7 +47,7 @@ const Home = () => {
                         </div>
 
                         <p className="font-normal py-4 text-sm">
-                            Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish.
+                            Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish...
                         </p>
                         <button className='text-1xl md:3xl'>Get Start</button>
                     </div>

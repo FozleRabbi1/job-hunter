@@ -19,6 +19,7 @@ const ShowDynamicFeatherData = () => {
     }
 
     const { id, img, jobName, title, jobCategory, otherCategory, location, salary, jobDescription, jobResponsibility, educationalRequirements, experiences, jobTitle, email, phone, address } = getData[0];
+    
     const dataObj = {
         id: id,
         img: img,

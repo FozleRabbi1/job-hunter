@@ -8,11 +8,9 @@ import NotFound from './ComponentFile/FileNotFoundFile/NotFound'
 import AboutUs from './ComponentFile/AboutUsFile/AboutUs'
 import Statistics from './ComponentFile/StatisticsFile/Statistics'
 import ShowDynamicFeatherData from './ComponentFile/DynamicFeatherDataFile/ShowDynamicFeatherData'
-// import ApplyedJobs from './ComponentFile/ApplyedJobsFile/ApplyedJobs'
 import { asyncLodaerFun } from './ComponentFile/LoderFun/Loder'
 import ApplayJobPage from './ComponentFile/ApplyedJobsFile/ApplayJobPage'
 import Blogs from './ComponentFile/BlogsFile/Blogs'
-// import ApplayJobPage from './ComponentFile/ApplyedJobsFile/ApplayJobPage'
 
 const router = createBrowserRouter([
   {

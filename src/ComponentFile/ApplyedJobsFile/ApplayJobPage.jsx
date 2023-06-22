@@ -4,7 +4,7 @@ import { Dropdown } from 'flowbite-react';
 
 const ApplayJobPage = () => {
     const getData = localStorage.getItem("dataId");
-    const [dropdownValue, setWropdownValue] = useState("")
+    const [dropdownValue, setWropdownValue] = useState("");
 
     const data = JSON.parse(getData)
     let getDatas = [];
